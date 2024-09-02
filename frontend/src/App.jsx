@@ -3,7 +3,7 @@ import Navbar from './components/Navbar/Navbar'
 
 const App = () => {
   return (
-    <div className='app'>
+    <div className='w-[80%] m-auto'>
       <Navbar />
     </div>
   )
