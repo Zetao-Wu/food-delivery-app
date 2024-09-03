@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { assets } from "../assets/assets";
 import { Link } from "react-router-dom";
+import { StoreContext } from "../context/StoreContext";
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("menu");
-  
+  const {getTotalCartAmount} = useContext(StoreContext);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -87,7 +88,7 @@ const Navbar = ({ setShowLogin }) => {
               className="w-5 h-5 lg:w-8 lg:h-8 hover:rotate-12 cursor-pointer"
             />
           </Link>
-          <div className="absolute min-w-[10px] min-h-[10px] bg-orange-500 rounded-[5px] top-[-4px] right-[-4px]"></div>
+          <div className={+getTotalCartAmount() === 0 ? '' : "absolute min-w-[10px] min-h-[10px] bg-orange-500 rounded-[5px] top-[-4px] right-[-4px]"}></div>
         </div>
         <button
           onClick={() => setShowLogin(true)}
