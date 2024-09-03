@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("menu");
+  
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
