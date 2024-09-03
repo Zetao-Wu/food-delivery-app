@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
   const [menu, setMenu] = useState("menu");
 
   const scrollToSection = (id) => {
@@ -83,7 +83,7 @@ const Navbar = () => {
           />
           <div className="absolute min-w-[10px] min-h-[10px] bg-orange-500 rounded-[5px] top-[-4px] right-[-4px]"></div>
         </div>
-        <button className="bg-transparent text-[10px] lg:text-[16px] border border-red-700 p-1 lg:py-4 lg:px-8 rounded-2xl cursor-pointer hover:bg-[#fff4f2]">
+        <button onClick={() => setShowLogin(true)} className="bg-transparent text-[10px] lg:text-[16px] border border-red-700 p-1 lg:py-4 lg:px-8 rounded-2xl cursor-pointer hover:bg-[#fff4f2]">
           Sign In
         </button>
       </div>
