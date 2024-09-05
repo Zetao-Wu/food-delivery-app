@@ -18,7 +18,7 @@ const addFood = async (req, res) => {
     res.json({ success: true, message: "Food Added" });
   } catch (error) {
     console.log(error);
-    res.json({ success: false, message: "Error" });
+    res.json({ success: false, message: "Error adding food" });
   }
 };
 
@@ -29,7 +29,7 @@ const listFood = async (req, res) => {
     res.json({ success: true, data: foods });
   } catch (error) {
     console.log(error);
-    res.json({ success: true, message: "Error" });
+    res.json({ success: false, message: "Error fetching food list" });
   }
 };
 
@@ -37,13 +37,23 @@ const listFood = async (req, res) => {
 const removeFood = async (req, res) => {
   try {
     const food = await foodModel.findById(req.body.id);
-    fs.unlink(`uploads/${food.image}`, () => {});
+
+    if (!food) {
+      return res.json({ success: false, message: "Food item not found" });
+    }
+
+    // Remove the image file associated with the food item
+    fs.unlink(`uploads/${food.image}`, (err) => {
+      if (err) {
+        console.log(`Error deleting image: ${err}`);
+      }
+    });
 
     await foodModel.findByIdAndDelete(req.body.id);
-    res.json({ success: true, message: "Food Removed"})
+    res.json({ success: true, message: "Food Removed" });
   } catch (error) {
     console.log(error);
-    res.json({ success: true, message: "Error" });
+    res.json({ success: false, message: "Error removing food" });
   }
 };
 
