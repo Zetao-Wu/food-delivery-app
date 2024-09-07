@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { StoreContext } from "../context/StoreContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {toast} from 'react-toastify'
+
 
 
 const PlaceOrder = () => {
@@ -58,11 +60,11 @@ const PlaceOrder = () => {
   useEffect(() => {
     if (!token) {
       navigate('/cart');
-      alert('Please Login First')
+      toast.error("Please Login First")
     }
     else if (getTotalCartAmount() === 0){
       navigate('/cart')
-      alert('Please Add Items to the Cart First')
+      toast.error("Please Add an Item to the Cart")
     }
   }, [token])
 
