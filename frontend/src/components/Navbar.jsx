@@ -124,10 +124,10 @@ const Navbar = ({ setShowLogin }) => {
             />
             {/* Dropdown menu hidden by default, shown on hover */}
             <ul className="absolute right-0 z-10 hidden group-hover:flex flex-col gap-2 bg-[#fff2ef] p-4 rounded-lg shadow-md">
-              <li className="flex items-center gap-2 cursor-pointer hover:bg-gray-100 px-2 py-1 rounded-md">
+              <Link to='/myorders' className="flex items-center gap-2 cursor-pointer hover:bg-gray-100 px-2 py-1 rounded-md">
                 <img src={assets.bag_icon} alt="Orders" className="w-4 h-4" />
                 <p>Orders</p>
-              </li>
+              </Link>
               <hr className="border-gray-300" />
               <li
                 onClick={logout}
