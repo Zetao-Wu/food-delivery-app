@@ -21,7 +21,7 @@ Please follow these steps to step up the webpage locally on your device.
 **Cloning the Repository and Installing the Project:**
 
 ```bash
-git clone https://github.com/Zetao-Wu/nike.git](https://github.com/Zetao-Wu/food-delivery-app.git
+git clone https://github.com/Zetao-Wu/food-delivery-app.git
 cd backend
 npm install
 cd ../admin
