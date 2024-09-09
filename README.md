@@ -1,19 +1,12 @@
-<img width="1568" alt="Screenshot 2024-07-18 at 9 24 50 PM" src="https://github.com/user-attachments/assets/45b72b17-55a1-40f2-aee2-b495b7978761">
+<img width="1452" alt="Screenshot 2024-09-09 at 3 41 15 PM" src="https://github.com/user-attachments/assets/c6894e81-4f20-4dd6-8619-ae5f07bc1969">
 
-## Nike Clone
 
-Developed a Nike Clone webpage showcasing some new Nike Arrivals and popular products using HTML, CSS, Javascript, and React. This program leverages smooth animations using AOS Animations and ensures responsive UI/UX designs using Tailwind CSS such that the webpage can be deployed on various devices including, laptops, tablets, and mobile phones. You can click on the link to visit the deployed site: https://zetao-wu.github.io/nike/.
+## Food-Delivery App
 
-## Features
+Developed a food delivery app that is fully functional and works with different servers that are specifically for the Admin and User. This project is a full-stack MERN application that focuses on role-based authorization with JWT as a secure gateway for user authentication. Furthermore, this application has integrated Stripe for a secure payment portal that is available for real-time payment. 
+You can click on this link to visit the deployed site as a USER: https://food-delivery-app-frontend-jwm9.onrender.com/
+You can click on this link to visit the deployed site as an ADMIN: https://food-delivery-app-admin-fofa.onrender.com/
 
-- Visually appealing hero section that showcases modern UI/UX design and working carousel
-- A Popular Products section that highlights some popular Nike products
-- An informative section that gives some context about us with a unique design
-- A Special Offers section, showcasing some great deals with an eye-catching layout
-- Some testimonials from satisfied customers
-- A newsletter section that encourages user engagement
-- A comprehensive footer with various links
-- The entire webpage is responsive across all devices, leveraging Tailwind's mobile-friendly capabilities
 
 ## Project Installation
 
@@ -25,16 +18,15 @@ Please follow these steps to step up the webpage locally on your device.
 - Node.js
 - Node Package Manager
 
-**Cloning the Repository:**
+**Cloning the Repository and Installing the Project:**
 
 ```bash
-git clone https://github.com/Zetao-Wu/nike.git
-cd nike
-```
-
-**Install the Project:**
-
-```bash
+git clone https://github.com/Zetao-Wu/nike.git](https://github.com/Zetao-Wu/food-delivery-app.git
+cd backend
+npm install
+cd ../admin
+npm install
+cd ../frontend
 npm install
 ```
 
